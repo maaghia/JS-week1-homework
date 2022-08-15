@@ -82,10 +82,16 @@ function loadQuiz() {
     countdown = 30;
     
     //when time is out
-   /* if (countdown==0){
-        button.style.background-color == "red";
-    }*/
-
+    if (countdown==0){
+        //keep counet at zero
+        countdown = 0;
+        //disable inputs
+        document.getElementById("a").disabled = true;
+        document.getElementById("b").disabled = true;
+        document.getElementById("c").disabled = true;
+        document.getElementById("d").disabled = true;
+        //change some colors to red
+    }
     const currentQuizData = quizData[currentQuiz];
     console.log(currentQuizData);
 
